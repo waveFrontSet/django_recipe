@@ -15,7 +15,10 @@ urlpatterns = [
     # User management
     path("users/", include("django_recipe.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    # Your stuff: custom urls includes go here
+    # cooking_recipes API
+    path(
+        "cooking/", include("django_recipe.cooking_recipes.urls", namespace="cooking")
+    ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

@@ -261,5 +261,8 @@ ACCOUNT_ADAPTER = "django_recipe.users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "django_recipe.users.adapters.SocialAccountAdapter"
 
 
-# Your stuff...
-# ------------------------------------------------------------------------------
+# Rest-framework config
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
