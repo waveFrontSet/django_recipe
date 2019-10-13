@@ -53,6 +53,7 @@ psycopg2 = "==2.8.3"
 django-anymail = {extras = ["mailgun"],version = "==7.0.0"}
 Pillow = "==6.2.0"
 Django = "==2.2.6"
+pyyaml = "*"
 
 [requires]
 python_version = "3.7"
