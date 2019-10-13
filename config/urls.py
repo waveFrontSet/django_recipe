@@ -4,9 +4,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from rest_framework.schemas import get_schema_view
+
+schema_view = get_schema_view(
+    title="Django Recipe API",
+    description="REST API to manage cooking recipes",
+    version="0.1",
+)
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="swagger-ui.html"), name="swagger-ui"),
+    path("schema", schema_view, name="schema_url"),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
